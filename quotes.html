@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotes — My Learning Site</title>
+  <meta name="description" content="Eighteen quotations about design and programming, one of them picked at random on every visit.">
+
+  <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js" defer></script>
+  <script src="quotes.js" defer></script>
+</head>
+<body data-page="quotes">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div id="nav-slot"></div>
+
+  <main id="main">
+    <!-- ---------- Items 2 and 5: quotes, styled, random one at the top ---------- -->
+    <section class="page-head wrap">
+      <p class="eyebrow">Quotes</p>
+      <h1>Eighteen quotes<br>worth keeping.</h1>
+      <p class="lead">
+        Lines I collected while learning to build for the web — about design,
+        simplicity and the honest limits of a computer. One of them greets you
+        at random on every visit.
+      </p>
+    </section>
+
+    <section class="quote-hero">
+      <div class="wrap">
+        <p class="eyebrow">Quote of the visit</p>
+
+        <blockquote class="quote-feature">
+          <p class="quote-feature-text" id="quote-of-the-visit">
+            “The best way to predict the future is to invent it.”
+          </p>
+          <footer class="quote-feature-author" id="quote-of-the-visit-author">— Alan Kay</footer>
+        </blockquote>
+
+        <div class="button-row">
+          <button class="btn btn-primary" type="button" id="next-quote">
+            Another one
+          </button>
+          <a class="btn btn-ghost" href="#all-quotes">See all 18</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- The whole collection ---------- -->
+    <section class="section wrap" id="all-quotes" aria-labelledby="all-title">
+      <div class="section-head">
+        <h2 id="all-title">All the quotes</h2>
+        <p class="section-sub">Collected while learning — one per idea.</p>
+      </div>
+
+      <!-- quotes.js fills this list -->
+      <div class="quote-grid" id="quote-list"></div>
+
+      <noscript>
+        <p class="note">
+          JavaScript is off, so the list cannot be built. The quotes live in
+          <code>quotes.js</code> — open it to read them.
+        </p>
+      </noscript>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Built by ZHENG Yi · Web Technologies 2026 · BiUH</p>
+      <p class="footer-note">Eighteen quotes, one array, no database.</p>
+    </div>
+  </footer>
+</body>
+</html>

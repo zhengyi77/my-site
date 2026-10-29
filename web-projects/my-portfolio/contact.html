@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — ZHENG Yi</title>
+  <meta name="description" content="Get in touch with ZHENG Yi — email, GitHub, and a short message form.">
+
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — ZHENG Yi">
+  <meta property="og:description" content="Email, GitHub, or a short message.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="theme-color" content="#f7f3ec">
+
+  <script>
+    // Pick the saved theme before the first paint, so the page never flashes.
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('portfolio-theme'); } catch (e) { /* private mode */ }
+      var dark = saved ? saved === 'dark'
+                       : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">Z</span>
+        <span class="brand-text">ZHENG Yi</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="about.html" data-nav="about">About</a></li>
+          <li><a href="projects.html" data-nav="projects">Projects</a></li>
+          <li><a href="contact.html" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head wrap">
+      <p class="eyebrow">Contact</p>
+      <h1>Say hello.</h1>
+      <p class="lead">Short messages get short answers, which is usually what both of us want.</p>
+    </section>
+
+    <section class="section wrap contact-layout">
+      <div class="contact-form-wrap">
+        <h2 class="form-title">Send a message</h2>
+
+        <form class="contact-form" novalidate data-contact-form>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required
+                   aria-describedby="name-error">
+            <p class="error" id="name-error" role="alert" hidden>Please tell me what to call you.</p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required
+                   placeholder="you@example.com" aria-describedby="email-error">
+            <p class="error" id="email-error" role="alert" hidden>That does not look like an email address.</p>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required
+                      aria-describedby="message-error"></textarea>
+            <p class="error" id="message-error" role="alert" hidden>A few words would help — at least 10 characters.</p>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+          <p class="form-hint">
+            This form has no server behind it — it validates on the page and then hands
+            the message to your email app. The real address is on the right.
+          </p>
+        </form>
+      </div>
+
+      <aside class="contact-side" aria-label="Other ways to reach me">
+        <h2 class="form-title">Elsewhere</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Email</span>
+            <!-- TODO: replace with the address you actually check -->
+            <a href="mailto:your.name@example.com">your.name@example.com</a>
+          </li>
+          <li>
+            <span class="contact-label">GitHub</span>
+            <!-- TODO: replace with your GitHub profile -->
+            <a href="https://github.com/" target="_blank" rel="noopener">github.com/your-name</a>
+          </li>
+          <li>
+            <span class="contact-label">University</span>
+            <span>BiUH, Hainan</span>
+          </li>
+          <li>
+            <span class="contact-label">Reply time</span>
+            <span>Usually within two days</span>
+          </li>
+        </ul>
+
+        <div class="card side-note">
+          <h3>For the course</h3>
+          <p>
+            Handing in? The repository and the live site links are on the
+            <a href="projects.html">projects page</a> — that is where the
+            submission lives.
+          </p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span data-year>2025</span> ZHENG Yi · Built by hand for the Web Technologies course.</p>
+      <nav aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

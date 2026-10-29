@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine — My Learning Site</title>
+  <meta name="description" content="A useless machine that switches itself off, and a small game you can lose.">
+
+  <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js" defer></script>
+  <script src="machine.js" defer></script>
+</head>
+<body data-page="machine">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div id="nav-slot"></div>
+
+  <main id="main">
+    <section class="page-head wrap">
+      <p class="eyebrow">Items 6 and 7</p>
+      <h1>A machine that switches itself off.</h1>
+      <p class="lead">
+        Turn the switch on. An arm reaches out, turns it back off, and goes away.
+        That is the whole idea — and it is the most honest toy on the web.
+      </p>
+    </section>
+
+    <!-- ---------- Item 6: the useless machine ---------- -->
+    <section class="section wrap" aria-labelledby="machine-title">
+      <div class="section-head">
+        <h2 id="machine-title">The useless machine</h2>
+        <p class="section-sub">No purpose. Excellent at it.</p>
+      </div>
+
+      <div class="machine-stage" id="machine-stage">
+        <div class="arm" aria-hidden="true"></div>
+
+        <div class="machine-box">
+          <button class="switch" id="switch" type="button" role="switch"
+                  aria-checked="false" aria-label="Machine switch">
+            <span class="switch-knob" aria-hidden="true"></span>
+          </button>
+          <span class="machine-caption">Try to keep it on.</span>
+        </div>
+      </div>
+
+      <p class="machine-count">
+        The machine has switched itself off
+        <strong id="count" aria-live="polite">0</strong> times.
+      </p>
+    </section>
+
+    <!-- ---------- Item 7: the game ---------- -->
+    <section class="section wrap" aria-labelledby="game-title">
+      <div class="section-head">
+        <h2 id="game-title">Beat the machine</h2>
+        <p class="section-sub">Twenty seconds. Click the target as often as you can.</p>
+      </div>
+
+      <div class="game">
+        <div class="game-hud">
+          <span>Score <strong id="score">0</strong></span>
+          <span>Time <strong id="time">20</strong>s</span>
+          <span>Best <strong id="best">0</strong></span>
+        </div>
+
+        <div class="game-box" id="game-box">
+          <button class="target" id="target" type="button" hidden>Click</button>
+
+          <div class="game-overlay" id="game-overlay">
+            <p class="game-intro">
+              The target jumps somewhere new every time you hit it.
+              You have twenty seconds.
+            </p>
+            <button class="btn btn-primary" type="button" id="start">Start game</button>
+          </div>
+        </div>
+
+        <p class="game-status" id="game-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Built by ZHENG Yi · Web Technologies 2026 · BiUH</p>
+      <p class="footer-note">One switch, one arm, one countdown.</p>
+    </div>
+  </footer>
+</body>
+</html>

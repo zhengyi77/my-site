@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home — My Learning Site</title>
+  <meta name="description" content="A small website built while learning HTML, CSS and JavaScript: a quote page, a project list and a useless machine.">
+
+  <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- The navigation is injected here by nav.js -->
+  <div id="nav-slot"></div>
+
+  <main id="main">
+    <!-- ---------- Item 1: hero image + overview of the site ---------- -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-body">
+          <p class="eyebrow">Web Technologies · Project 1</p>
+          <h1>Learning HTML,<br>one page at a time.</h1>
+          <p class="lead">
+            This is my learning website: four pages that grew lesson by lesson.
+            A quote collection, a list of project ideas, and a machine whose only
+            purpose is to switch itself off.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="quotes.html">Read the quotes</a>
+            <a class="btn btn-ghost" href="machine.html">Meet the machine</a>
+          </div>
+        </div>
+
+        <figure class="hero-media">
+          <img src="images/hero.jpg" width="1600" height="900"
+               alt="Abstract illustration: overlapping shapes in orange, green and cream">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ---------- Overview: what is on this site ---------- -->
+    <section class="section wrap" aria-labelledby="overview-title">
+      <div class="section-head">
+        <h2 id="overview-title">What is on this site</h2>
+        <p class="section-sub">Three pages, three different problems.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <span class="card-index" aria-hidden="true">01</span>
+          <h3><a href="quotes.html">Quotes</a></h3>
+          <p>
+            Eighteen quotations about design and programming, in a JavaScript
+            array. One of them is picked at random every time the page loads.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-index" aria-hidden="true">02</span>
+          <h3><a href="project.html">Project ideas</a></h3>
+          <p>
+            Six ideas for what I could build next, each with a picture, a note
+            on what it would teach me, and an honest status.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-index" aria-hidden="true">03</span>
+          <h3><a href="machine.html">The machine</a></h3>
+          <p>
+            A digital toy: flip the switch, and an arm reaches out to flip it
+            back. Under it, a small game you can actually lose.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ---------- How it is built (nice to defend in the presentation) ---------- -->
+    <section class="section wrap" aria-labelledby="build-title">
+      <div class="section-head">
+        <h2 id="build-title">How it is built</h2>
+        <p class="section-sub">No framework, no build step. Four files you can read.</p>
+      </div>
+
+      <ol class="steps">
+        <li>
+          <h3>One navigation, four pages</h3>
+          <p>
+            <code>nav.html</code> holds the markup, <code>nav.js</code> fetches it
+            and puts it on every page. A new link is added once.
+          </p>
+        </li>
+        <li>
+          <h3>One stylesheet</h3>
+          <p>
+            <code>style.css</code> uses custom properties for colours and spacing,
+            so the whole site can change from the top of one file.
+          </p>
+        </li>
+        <li>
+          <h3>JavaScript where it earns its place</h3>
+          <p>
+            A random quote, a moving arm, a countdown. Everything else is plain
+            HTML and CSS — which is also why it still works without scripts.
+          </p>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Built by ZHENG Yi · Web Technologies 2026 · BiUH</p>
+      <p class="footer-note">Four pages, one stylesheet, no framework.</p>
+    </div>
+  </footer>
+</body>
+</html>

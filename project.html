@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — My Learning Site</title>
+  <meta name="description" content="Six project ideas, with a picture, a short description and an honest status for each.">
+
+  <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js" defer></script>
+</head>
+<body data-page="projects">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div id="nav-slot"></div>
+
+  <main id="main">
+    <section class="page-head wrap">
+      <p class="eyebrow">Item 4</p>
+      <h1>Six things I want to build.</h1>
+      <p class="lead">
+        Not a portfolio — a list of ideas, with the reason each one is worth a
+        weekend. The status is honest: two are finished, the rest are not.
+      </p>
+    </section>
+
+    <section class="section wrap" aria-labelledby="ideas-title">
+      <h2 id="ideas-title" class="sr-only">The project ideas</h2>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <img src="images/project-1.jpg" width="800" height="500"
+               alt="Abstract illustration of a timer made of stacked circles" loading="lazy">
+          <div class="project-body">
+            <span class="status status-done">Done</span>
+            <h3>Study Timer</h3>
+            <p>
+              A Pomodoro timer: 25 minutes of work, 5 minutes of rest, a count in
+              the page title so you see it from another tab.
+            </p>
+            <p class="project-learn">Learned: <code>setInterval</code> and clearing it properly.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/project-2.jpg" width="800" height="500"
+               alt="Abstract illustration of overlapping cards" loading="lazy">
+          <div class="project-body">
+            <span class="status status-progress">In progress</span>
+            <h3>Flashcard Trainer</h3>
+            <p>
+              Flip a card, mark it known or unknown, and see the unknown ones come
+              back more often. A tiny spaced-repetition system.
+            </p>
+            <p class="project-learn">Learned: arrays of objects, and that state is just data.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/project-3.jpg" width="800" height="500"
+               alt="Abstract illustration of a map made of lines and dots" loading="lazy">
+          <div class="project-body">
+            <span class="status status-planned">Planned</span>
+            <h3>Campus Map</h3>
+            <p>
+              A simple map of the campus with clickable buildings. Click one and a
+              panel explains what happens there.
+            </p>
+            <p class="project-learn">Would learn: positioning and SVG in the page.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/project-4.jpg" width="800" height="500"
+               alt="Abstract illustration of a grid of small squares" loading="lazy">
+          <div class="project-body">
+            <span class="status status-planned">Planned</span>
+            <h3>Recipe Scaler</h3>
+            <p>
+              Paste a recipe, choose four portions instead of two, and every amount
+              changes. The tricky part is fractions.
+            </p>
+            <p class="project-learn">Would learn: form input, parsing numbers, edge cases.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/project-5.jpg" width="800" height="500"
+               alt="Abstract illustration of a cloud and a sun" loading="lazy">
+          <div class="project-body">
+            <span class="status status-idea">Idea</span>
+            <h3>Weather Card</h3>
+            <p>
+              One card, one city, the current temperature. It would be my first page
+              that talks to someone else's server.
+            </p>
+            <p class="project-learn">Would learn: <code>fetch</code>, promises, error states.</p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/project-6.jpg" width="800" height="500"
+               alt="Abstract illustration of a window frame in warm colours" loading="lazy">
+          <div class="project-body">
+            <span class="status status-idea">Idea</span>
+            <h3>This Site, Rebuilt</h3>
+            <p>
+              Take this learning website and rebuild it in Vue, with the quotes as
+              a component and no page reloads at all.
+            </p>
+            <p class="project-learn">Would learn: components and reactivity.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="note">
+        Two of six are finished. That is the honest number, and it is the one I
+        will say out loud in the presentation.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Built by ZHENG Yi · Web Technologies 2026 · BiUH</p>
+      <p class="footer-note">Six ideas, two finished, four still ideas.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — ZHENG Yi</title>
+  <meta name="description" content="Course work and personal experiments by ZHENG Yi: a learning website, a useless machine, a quote page and this portfolio.">
+
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects — ZHENG Yi">
+  <meta property="og:description" content="Course work and personal experiments, with links to the code.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="theme-color" content="#f7f3ec">
+
+  <script>
+    // Pick the saved theme before the first paint, so the page never flashes.
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('portfolio-theme'); } catch (e) { /* private mode */ }
+      var dark = saved ? saved === 'dark'
+                       : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="projects">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">Z</span>
+        <span class="brand-text">ZHENG Yi</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="about.html" data-nav="about">About</a></li>
+          <li><a href="projects.html" data-nav="projects">Projects</a></li>
+          <li><a href="contact.html" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head wrap">
+      <p class="eyebrow">Projects</p>
+      <h1>Six things,<br>none of them perfect.</h1>
+      <p class="lead">Course work first, then experiments. Every one has a repository behind it.</p>
+    </section>
+
+    <section class="section wrap" aria-labelledby="list-title">
+      <div class="section-head">
+        <h2 id="list-title" class="sr-only">Project list</h2>
+        <div class="filters" role="group" aria-label="Filter projects by category">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="course" aria-pressed="false">Course</button>
+          <button class="filter" type="button" data-filter="personal" aria-pressed="false">Personal</button>
+          <button class="filter" type="button" data-filter="experiment" aria-pressed="false">Experiments</button>
+        </div>
+        <p class="filter-count" data-filter-count aria-live="polite"></p>
+      </div>
+
+      <div class="grid grid-2" data-project-grid>
+        <article class="work-card" data-tags="course">
+          <div class="work-thumb thumb-a" aria-hidden="true">“</div>
+          <h3>The Learning Website</h3>
+          <p>
+            Six pages built lesson by lesson: quotes, a project list, a useless machine,
+            a navigation written once and injected everywhere by JavaScript.
+          </p>
+          <ul class="tag-list"><li class="tag">Course</li><li class="tag">HTML</li><li class="tag">CSS</li><li class="tag">JavaScript</li></ul>
+          <!-- TODO: replace # with your repository URL -->
+          <a class="text-link" href="#">Repository <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="work-card" data-tags="personal">
+          <div class="work-thumb thumb-c" aria-hidden="true">▤</div>
+          <h3>This portfolio</h3>
+          <p>
+            Four pages, one stylesheet, one script. Dark mode, a filter, a validated
+            form — and no framework, on purpose, so I can explain every line.
+          </p>
+          <ul class="tag-list"><li class="tag">Personal</li><li class="tag">Semantic HTML</li><li class="tag">Responsive</li></ul>
+          <a class="text-link" href="index.html">You are here <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="work-card" data-tags="course">
+          <div class="work-thumb thumb-b" aria-hidden="true">◻</div>
+          <h3>The Useless Machine</h3>
+          <p>
+            A page whose only job is to do one pointless thing beautifully. Turned into
+            a small game by the seventh lesson, because a button is never just a button.
+          </p>
+          <ul class="tag-list"><li class="tag">Course</li><li class="tag">JavaScript</li><li class="tag">Game loop</li></ul>
+          <a class="text-link" href="#">Repository <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="work-card" data-tags="course">
+          <div class="work-thumb thumb-d" aria-hidden="true">❝</div>
+          <h3>Quotes &amp; Random Hero</h3>
+          <p>
+            Fifteen quotes, one random one on every visit, a hero image that changes with
+            it. My first real encounter with arrays and <code>Math.random()</code>.
+          </p>
+          <ul class="tag-list"><li class="tag">Course</li><li class="tag">Arrays</li><li class="tag">CSS</li></ul>
+          <a class="text-link" href="#">Repository <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="work-card" data-tags="experiment">
+          <div class="work-thumb thumb-e" aria-hidden="true">⌘</div>
+          <h3>Keyboard-first Notes</h3>
+          <p>
+            An experiment: a note list you can drive entirely from the keyboard, with
+            <code>localStorage</code> as the only database.
+          </p>
+          <ul class="tag-list"><li class="tag">Experiment</li><li class="tag">localStorage</li><li class="tag">A11y</li></ul>
+          <a class="text-link" href="#">Repository <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="work-card" data-tags="experiment">
+          <div class="work-thumb thumb-f" aria-hidden="true">◐</div>
+          <h3>Vue Quote Board</h3>
+          <p>
+            The quotes page rebuilt in Vue 3 as a single component: reactive list,
+            computed filters, no page reload anywhere.
+          </p>
+          <ul class="tag-list"><li class="tag">Experiment</li><li class="tag">Vue 3</li><li class="tag">Reactivity</li></ul>
+          <a class="text-link" href="#">Repository <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+
+      <p class="note">
+        The last two are sketches, not finished work — they exist to keep the list honest.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span data-year>2025</span> ZHENG Yi · Built by hand for the Web Technologies course.</p>
+      <nav aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
